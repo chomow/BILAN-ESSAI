@@ -3297,6 +3297,25 @@ const stressFactorsConfig = {
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-sm font-bold text-white">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+{/* Section Notes */}
+        <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-xl rounded-xl border border-indigo-500/30 p-3 mb-4 shadow-lg">
+          <div className="flex items-center gap-2 mb-3">
+            <Edit className="text-indigo-400" size={16} />
+            <h2 className="text-sm font-bold text-white">NOTES / OBSERVATIONS</h2>
+          </div>
+          
+          <textarea
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+            placeholder="Ajoutez ici vos notes, observations médicales, recommandations..."
+            className="w-full p-3 bg-slate-900/50 border border-indigo-500/50 rounded-lg text-white text-sm min-h-[100px] resize-y"
+            rows={4}
+          />
+          
+          <p className="text-xs text-gray-400 mt-2">
+            💡 Ces notes apparaîtront dans le PDF généré
+          </p>
+        </div>
                   BILAN QUOTIDIEN
                 </span>
               </h2>
